@@ -17,8 +17,10 @@ spec:
       containers:
         - image: denitiawan/argocd-springboot3-service:latest
           name: search-service
-        env:
-          - name: APP_PORT
-            value: 80
-          - name: APP_NAME
-            value: SEARCH-SERVICE     
+          ports:
+            - containerPort: 80
+          env:
+            - name: APP_PORT
+              value: "80"
+            - name: APP_NAME
+              value: "SEARCH-SERVICE"
